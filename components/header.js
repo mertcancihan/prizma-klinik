@@ -14,28 +14,37 @@ function createHeader() {
                 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex space-x-8">
-                    <a href="${getRelativePath()}index.html" class="text-gray-300 font-medium hover:text-white transition nav-link" data-page="home">Ana Sayfa</a>
+                    <a href="${getRelativePath()}index.html" class="text-gray-300 font-medium hover:text-white transition nav-link" data-page="home" data-translate="header.home">Ana Sayfa</a>
                     <div class="relative group">
-                        <button class="text-gray-300 font-medium hover:text-white transition flex items-center nav-link" data-page="treatments">
+                        <button class="text-gray-300 font-medium hover:text-white transition flex items-center nav-link" data-page="treatments" data-translate="header.treatments">
                             Tedavilerimiz
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
                         <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md p-2 hidden">
-                            <a href="${getRelativePath()}tedaviler/estetik-dis-hekimligi.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="estetik">Estetik Diş Hekimliği</a>
-                            <a href="${getRelativePath()}tedaviler/restoratif-endodonti.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="restoratif">Restoratif ve Endodonti</a>
-                            <a href="${getRelativePath()}tedaviler/protetik-tedaviler.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="protetik">Protetik Tedaviler</a>
-                            <a href="${getRelativePath()}tedaviler/ortodontik-tedaviler.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="ortodontik">Ortodontik Tedaviler</a>
-                            <a href="${getRelativePath()}tedaviler/cerrahi-tedaviler.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="cerrahi">Cerrahi Tedaviler</a>
-                            <a href="${getRelativePath()}tedaviler/cene-eklemi-tedavileri.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="cene">Çene Eklemi Rahatsızlıkları</a>
-                            <a href="${getRelativePath()}tedaviler/cocuk-dis-hekimligi.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="cocuk">Çocuk Diş Hekimliği</a>
-                            <a href="${getRelativePath()}tedaviler/dis-eti-hastaliklari.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="diseti">Diş Eti Hastalıkları</a>
+                            <a href="${getRelativePath()}tedaviler/estetik-dis-hekimligi.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="estetik" data-translate="aesthetic">Estetik Diş Hekimliği</a>
+                            <a href="${getRelativePath()}tedaviler/restoratif-endodonti.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="restoratif" data-translate="restorative">Restoratif ve Endodonti</a>
+                            <a href="${getRelativePath()}tedaviler/protetik-tedaviler.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="protetik" data-translate="prosthetic">Protetik Tedaviler</a>
+                            <a href="${getRelativePath()}tedaviler/ortodontik-tedaviler.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="ortodontik" data-translate="orthodontic">Ortodontik Tedaviler</a>
+                            <a href="${getRelativePath()}tedaviler/cerrahi-tedaviler.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="cerrahi" data-translate="surgical">Cerrahi Tedaviler</a>
+                            <a href="${getRelativePath()}tedaviler/cene-eklemi-tedavileri.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="cene" data-translate="jawJoint">Çene Eklemi Rahatsızlıkları</a>
+                            <a href="${getRelativePath()}tedaviler/cocuk-dis-hekimligi.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="cocuk" data-translate="pediatric">Çocuk Diş Hekimliği</a>
+                            <a href="${getRelativePath()}tedaviler/dis-eti-hastaliklari.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="diseti" data-translate="gumDisease">Diş Eti Hastalıkları</a>
                         </div>
                     </div>
-                    <a href="${getRelativePath()}hakkimizda.html" class="text-gray-300 font-medium hover:text-white transition nav-link" data-page="about">Hakkımızda</a>
-                    <a href="${getRelativePath()}ekibimiz.html" class="text-gray-300 font-medium hover:text-white transition nav-link" data-page="team">Ekibimiz</a>
-                    <a href="${getRelativePath()}iletisim.html" class="text-gray-300 font-medium hover:text-white transition nav-link" data-page="contact">İletişim</a>
+                    <a href="${getRelativePath()}hakkimizda.html" class="text-gray-300 font-medium hover:text-white transition nav-link" data-page="about" data-translate="header.about">Hakkımızda</a>
+                    <a href="${getRelativePath()}ekibimiz.html" class="text-gray-300 font-medium hover:text-white transition nav-link" data-page="team" data-translate="header.team">Ekibimiz</a>
+                    <a href="${getRelativePath()}iletisim.html" class="text-gray-300 font-medium hover:text-white transition nav-link" data-page="contact" data-translate="header.contact">İletişim</a>
+                    
+                    <!-- Dil Seçme Butonları -->
+                    <div class="flex items-center space-x-2 ml-4">
+                        <button onclick="changeLanguage('tr')" class="language-button text-gray-300 hover:text-white transition text-sm font-medium" data-lang="tr">TR</button>
+                        <span class="text-gray-500">|</span>
+                        <button onclick="changeLanguage('en')" class="language-button text-gray-300 hover:text-white transition text-sm font-medium" data-lang="en">EN</button>
+                        <span class="text-gray-500">|</span>
+                        <button onclick="changeLanguage('de')" class="language-button text-gray-300 hover:text-white transition text-sm font-medium" data-lang="de">DE</button>
+                    </div>
                 </nav>
                 
                 <!-- Mobile Menu Button -->
@@ -47,30 +56,38 @@ function createHeader() {
             </div>
             
             <!-- Mobile Navigation -->
-            <!-- Mobile Navigation -->
             <div id="mobile-menu" class="md:hidden transform transition-all duration-300 ease-in-out mt-4 pb-4 bg-primary-color">
-                <a href="${getRelativePath()}index.html" class="block py-2 px-2 text-gray-300 hover:text-white font-medium nav-link" data-page="home">Ana Sayfa</a>
+                <a href="${getRelativePath()}index.html" class="block py-2 px-2 text-gray-300 hover:text-white font-medium nav-link" data-page="home" data-translate="header.home">Ana Sayfa</a>
                 <div class="relative mobile-dropdown">
-                    <button id="mobile-dropdown-button" class="w-full text-left py-2 px-2 text-gray-300 hover:text-white font-medium flex justify-between items-center nav-link" data-page="treatments">
+                    <button id="mobile-dropdown-button" class="w-full text-left py-2 px-2 text-gray-300 hover:text-white font-medium flex justify-between items-center nav-link" data-page="treatments" data-translate="header.treatments">
                         Tedavilerimiz
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 mobile-dropdown-icon text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
                     <div id="mobile-dropdown-content" class="hidden pl-4 mt-1 bg-opacity-20 bg-white">
-                        <a href="${getRelativePath()}tedaviler/estetik-dis-hekimligi.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="estetik">Estetik Diş Hekimliği</a>
-                        <a href="${getRelativePath()}tedaviler/restoratif-endodonti.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="restoratif">Restoratif ve Endodonti</a>
-                        <a href="${getRelativePath()}tedaviler/protetik-tedaviler.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="protetik">Protetik Tedaviler</a>
-                        <a href="${getRelativePath()}tedaviler/ortodontik-tedaviler.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="ortodontik">Ortodontik Tedaviler</a>
-                        <a href="${getRelativePath()}tedaviler/cerrahi-tedaviler.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="cerrahi">Cerrahi Tedaviler</a>
-                        <a href="${getRelativePath()}tedaviler/cene-eklemi-tedavileri.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="cene">Çene Eklemi Rahatsızlıkları</a>
-                        <a href="${getRelativePath()}tedaviler/cocuk-dis-hekimligi.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="cocuk">Çocuk Diş Hekimliği</a>
-                        <a href="${getRelativePath()}tedaviler/dis-eti-hastaliklari.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="diseti">Diş Eti Hastalıkları</a>
+                        <a href="${getRelativePath()}tedaviler/estetik-dis-hekimligi.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="estetik" data-translate="aesthetic">Estetik Diş Hekimliği</a>
+                        <a href="${getRelativePath()}tedaviler/restoratif-endodonti.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="restoratif" data-translate="restorative">Restoratif ve Endodonti</a>
+                        <a href="${getRelativePath()}tedaviler/protetik-tedaviler.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="protetik" data-translate="prosthetic">Protetik Tedaviler</a>
+                        <a href="${getRelativePath()}tedaviler/ortodontik-tedaviler.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="ortodontik" data-translate="orthodontic">Ortodontik Tedaviler</a>
+                        <a href="${getRelativePath()}tedaviler/cerrahi-tedaviler.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="cerrahi" data-translate="surgical">Cerrahi Tedaviler</a>
+                        <a href="${getRelativePath()}tedaviler/cene-eklemi-tedavileri.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="cene" data-translate="jawJoint">Çene Eklemi Rahatsızlıkları</a>
+                        <a href="${getRelativePath()}tedaviler/cocuk-dis-hekimligi.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="cocuk" data-translate="pediatric">Çocuk Diş Hekimliği</a>
+                        <a href="${getRelativePath()}tedaviler/dis-eti-hastaliklari.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="diseti" data-translate="gumDisease">Diş Eti Hastalıkları</a>
                     </div>
                 </div>
-                <a href="${getRelativePath()}hakkimizda.html" class="block py-2 px-2 text-gray-300 hover:text-white font-medium nav-link" data-page="about">Hakkımızda</a>
-                <a href="${getRelativePath()}ekibimiz.html" class="block py-2 px-2 text-gray-300 hover:text-white font-medium nav-link" data-page="team">Ekibimiz</a>
-                <a href="${getRelativePath()}iletisim.html" class="block py-2 px-2 text-gray-300 hover:text-white font-medium nav-link" data-page="contact">İletişim</a>
+                <a href="${getRelativePath()}hakkimizda.html" class="block py-2 px-2 text-gray-300 hover:text-white font-medium nav-link" data-page="about" data-translate="header.about">Hakkımızda</a>
+                <a href="${getRelativePath()}ekibimiz.html" class="block py-2 px-2 text-gray-300 hover:text-white font-medium nav-link" data-page="team" data-translate="header.team">Ekibimiz</a>
+                <a href="${getRelativePath()}iletisim.html" class="block py-2 px-2 text-gray-300 hover:text-white font-medium nav-link" data-page="contact" data-translate="header.contact">İletişim</a>
+                
+                                
+                <!-- Dil Seçme Butonları -->
+                    <button onclick="changeLanguage('tr')" class="block py-2 px-2 text-gray-300 hover:text-white font-medium nav-link" data-lang="tr">TR</button>
+                    <span class="text-gray-500">
+                    <button onclick="changeLanguage('en')" class="language-button text-gray-300 hover:text-white transition text-sm font-medium" data-lang="en">EN</button>
+                    <span class="text-gray-500">
+                    <button onclick="changeLanguage('de')" class="language-button text-gray-300 hover:text-white transition text-sm font-medium" data-lang="de">DE</button>
+             
             </div>
         </div>
     </header>
@@ -97,7 +114,71 @@ function loadHeader() {
         
         // Mobil menü işlevselliği
         setupMobileMenu();
+        
+        // Header metinlerini çevirmek için
+        updateHeaderLanguage();
     }
+}
+
+// Header dil çevirisini günceller
+function updateHeaderLanguage() {
+    // Kaydedilmiş dil tercihi varsa al, yoksa varsayılan TR
+    const currentLang = localStorage.getItem('language') || 'tr';
+    
+    // Debug için konsola yazdır
+    console.log("Mevcut dil: ", currentLang);
+    console.log("Features çevirisi: ", languages[currentLang].features);
+    
+    // Header'daki tüm çevrilebilir elementleri güncelle
+    const headerElements = document.querySelectorAll('#header-container [data-translate]');
+    headerElements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        
+        try {
+            // Önce genel languages objesini kullan (window.languages veya dışarıdaki languages)
+            let translation = null;
+            
+            // İki seviyeli anahtarlar için (header.home, header.about gibi)
+            if (key.includes('.')) {
+                const keys = key.split('.');
+                if (languages && languages[currentLang]) {
+                    let translationObj = languages[currentLang];
+                    
+                    for (const k of keys) {
+                        if (translationObj && translationObj[k]) {
+                            translationObj = translationObj[k];
+                        } else {
+                            translationObj = null;
+                            break;
+                        }
+                    }
+                    
+                    translation = translationObj;
+                }
+            } 
+            // Tek seviyeli anahtarlar için (aesthetic, prosthetic gibi)
+            else {
+                if (languages && languages[currentLang] && languages[currentLang][key]) {
+                    translation = languages[currentLang][key];
+                }
+            }
+            
+            if (translation) {
+                element.textContent = translation;
+            }
+        } catch (error) {
+            console.error("Header çeviri hatası:", error);
+        }
+    });
+    
+    // Aktif dil butonunu vurgula
+    document.querySelectorAll('.language-button').forEach(button => {
+        if (button.getAttribute('data-lang') === currentLang) {
+            button.classList.add('text-white', 'font-bold');
+        } else {
+            button.classList.remove('text-white', 'font-bold');
+        }
+    });
 }
 
 // Aktif sayfayı işaretler
@@ -147,21 +228,32 @@ function setupMobileMenu() {
     const mobileMenu = document.getElementById('mobile-menu');
 
     if (mobileMenu) {
-        mobileMenu.classList.add('hidden', 'opacity-0', 'pointer-events-none');
+        // Başlangıçta menüyü gizle - hem hidden hem opacity ile
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.add('opacity-0', 'pointer-events-none');
     }
+    
     if (mobileMenuButton && mobileMenu) {
         mobileMenuButton.addEventListener('click', function () {
             console.log("Menü butonuna tıklandı!");
-            const isMenuOpen = mobileMenu.classList.contains('opacity-0');
-            // Tailwind animasyonlu aç/kapat için opacity ve pointer-events kullan
-            if (isMenuOpen) {
+            
+            // Hem hidden hem opacity kullanarak menüyü aç/kapat
+            if (mobileMenu.classList.contains('hidden')) {
                 console.log("Menü açılıyor...");
-                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
-                mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                    mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+                }, 10); // Küçük bir gecikme ile transition efektini etkinleştir
             } else {
                 console.log("Menü kapanıyor...");
                 mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
                 mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                
+                // Animasyon bittikten sonra hidden ekle
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300); // Transition süresi kadar bekle
             }
         });
     }
@@ -171,24 +263,16 @@ function setupMobileMenu() {
     const mobileDropdownContent = document.getElementById('mobile-dropdown-content');
 
     if (mobileDropdownButton && mobileDropdownContent) {
-        // **Başlangıçta menüyü kapalı yap**
-        mobileDropdownContent.classList.add('opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
+        // Başlangıçta dropdown'ı gizle
+        mobileDropdownContent.classList.add('hidden');
 
-        mobileDropdownButton.addEventListener('click', function () {
+        mobileDropdownButton.addEventListener('click', function (e) {
             console.log("Dropdown butonuna tıklandı!");
-
-            if (mobileDropdownContent.classList.contains('opacity-0')) {
-                console.log("Dropdown açılıyor...");
-                mobileDropdownContent.classList.remove('opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
-                mobileDropdownContent.classList.add('opacity-100', 'pointer-events-auto', 'h-auto');
-            } else {
-                console.log("Dropdown kapanıyor...");
-                mobileDropdownContent.classList.remove('opacity-100', 'pointer-events-auto', 'h-auto');
-                mobileDropdownContent.classList.add('opacity-0', 'pointer-events-none', 'h-0', 'overflow-hidden');
-            }
+            e.stopPropagation(); // Event bubbling'i engelle
+            
+            mobileDropdownContent.classList.toggle('hidden');
         });
     }
-
 
     // Masaüstü dropdown menüsü için
     const desktopDropdown = document.querySelector('.group');
@@ -204,6 +288,11 @@ function setupMobileMenu() {
     }
 }
 
+// Dil değiştiğinde header'ı güncelle
+window.addEventListener('languageChanged', function() {
+    console.log("Dil değişikliği algılandı, header güncelleniyor...");
+    updateHeaderLanguage();
+});
 
 // Sayfa yüklendiğinde header'ı yükle
 document.addEventListener('DOMContentLoaded', loadHeader); 

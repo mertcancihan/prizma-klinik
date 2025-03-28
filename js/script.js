@@ -1,40 +1,60 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobil Menü Açma/Kapama
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-        });
-    }
-
-    // Mobil Dropdown Menüler
-    const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+// Dil değiştirme fonksiyonu
+function changeLanguage(lang) {
+    // Dil tercihini localStorage'a kaydet
+    localStorage.setItem('language', lang);
     
-    mobileDropdowns.forEach(dropdown => {
-        const dropdownButton = dropdown.querySelector('button');
-        const dropdownContent = dropdown.querySelector('.mobile-dropdown-content');
-        const dropdownIcon = dropdown.querySelector('.mobile-dropdown-icon');
+    // HTML lang özelliğini güncelle
+    document.documentElement.lang = lang;
+    
+    // Tüm çevrilebilir elementleri güncelle
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        const translation = getTranslation(key, lang);
         
-        if (dropdownButton && dropdownContent && dropdownIcon) {
-            dropdownButton.addEventListener('click', function() {
-                dropdownContent.classList.toggle('hidden');
-                dropdownContent.classList.toggle('active');
-                dropdownIcon.classList.toggle('active');
-            });
+        if (translation) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = translation;
+            } else if (element.tagName === 'META') {
+                element.content = translation;
+            } else {
+                element.textContent = translation;
+            }
         }
     });
-
-    // Mobil dropdown menü
-    const mobileDropdownButton = document.getElementById('mobile-dropdown-button');
-    const mobileDropdownContent = document.getElementById('mobile-dropdown-content');
     
-    if (mobileDropdownButton && mobileDropdownContent) {
-        mobileDropdownButton.addEventListener('click', function() {
-            mobileDropdownContent.classList.toggle('hidden');
-        });
+    // Aktif dil butonunu vurgula
+    document.querySelectorAll('.language-button').forEach(button => {
+        if (button.getAttribute('data-lang') === lang) {
+            button.classList.add('text-white', 'font-bold');
+        } else {
+            button.classList.remove('text-white', 'font-bold');
+        }
+    });
+    
+    // Özel bir olay tetikle
+    const languageChangedEvent = new Event('languageChanged');
+    window.dispatchEvent(languageChangedEvent);
+}
+
+// Çeviri alma fonksiyonu
+function getTranslation(key, lang) {
+    const keys = key.split('.');
+    let translation = languages[lang];
+    
+    for (const k of keys) {
+        if (translation && translation[k]) {
+            translation = translation[k];
+        } else {
+            return null;
+        }
     }
+    
+    return translation;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // NOT: Mobil Menü işlevselliği header.js içinde yönetiliyor
+    // Bu bölüm çakışmalara neden olduğu için kaldırıldı
 
     // Sayfa Geçişleri için Animasyon
     document.body.classList.add('page-transition');
@@ -110,4 +130,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Sayfa yüklendiğinde son seçilen dili yükle
+    const savedLanguage = localStorage.getItem('language') || 'tr';
+    changeLanguage(savedLanguage);
 }); 
