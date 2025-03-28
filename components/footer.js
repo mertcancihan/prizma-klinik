@@ -44,7 +44,7 @@ function createFooter() {
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
-                            <span>Atatürk Cad. No:123 Merkez/İstanbul</span>
+                            <span>70. Cd. No:19,Andiçen, 06936 Sincan/Ankara</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone-alt mr-2"></i>

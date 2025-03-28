@@ -28,7 +28,7 @@ function createHeader() {
                             <a href="${getRelativePath()}tedaviler/protetik-tedaviler.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="protetik">Protetik Tedaviler</a>
                             <a href="${getRelativePath()}tedaviler/ortodontik-tedaviler.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="ortodontik">Ortodontik Tedaviler</a>
                             <a href="${getRelativePath()}tedaviler/cerrahi-tedaviler.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="cerrahi">Cerrahi Tedaviler</a>
-                            <a href="${getRelativePath()}tedaviler/cene-eklemi.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="cene">Çene Eklemi Rahatsızlıkları</a>
+                            <a href="${getRelativePath()}tedaviler/cene-eklemi-tedavileri.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="cene">Çene Eklemi Rahatsızlıkları</a>
                             <a href="${getRelativePath()}tedaviler/cocuk-dis-hekimligi.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="cocuk">Çocuk Diş Hekimliği</a>
                             <a href="${getRelativePath()}tedaviler/dis-eti-hastaliklari.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md" data-treatment="diseti">Diş Eti Hastalıkları</a>
                         </div>
@@ -63,7 +63,7 @@ function createHeader() {
                         <a href="${getRelativePath()}tedaviler/protetik-tedaviler.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="protetik">Protetik Tedaviler</a>
                         <a href="${getRelativePath()}tedaviler/ortodontik-tedaviler.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="ortodontik">Ortodontik Tedaviler</a>
                         <a href="${getRelativePath()}tedaviler/cerrahi-tedaviler.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="cerrahi">Cerrahi Tedaviler</a>
-                        <a href="${getRelativePath()}tedaviler/cene-eklemi.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="cene">Çene Eklemi Rahatsızlıkları</a>
+                        <a href="${getRelativePath()}tedaviler/cene-eklemi-tedavileri.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="cene">Çene Eklemi Rahatsızlıkları</a>
                         <a href="${getRelativePath()}tedaviler/cocuk-dis-hekimligi.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="cocuk">Çocuk Diş Hekimliği</a>
                         <a href="${getRelativePath()}tedaviler/dis-eti-hastaliklari.html" class="block py-2 px-2 text-gray-300 hover:text-white" data-treatment="diseti">Diş Eti Hastalıkları</a>
                     </div>
