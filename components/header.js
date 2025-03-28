@@ -7,7 +7,7 @@ function createHeader() {
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
                     <a href="${getRelativePath()}index.html" class="flex items-center">
-                        <img src="images/logo.jpeg" alt="Prizma Klinik Logo" class="w-60">
+                        <img src="${getRelativePath()}images/logo.jpeg" alt="Prizma Klinik Logo" class="w-60">
                         <span class="-top-0.5 relative text-4xl text-white">Klinik</span>
                     </a>
                 </div>
