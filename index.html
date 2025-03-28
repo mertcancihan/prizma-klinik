@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prizma Klinik - Modern Diş Sağlığı Hizmetleri</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Header Component -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="relative bg-blue-600 text-white">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-90"></div>
+        <div class="container mx-auto px-4 py-20 relative z-10">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Modern Diş Sağlığı Hizmetleri</h1>
+                <p class="text-xl mb-8">Uzman kadromuz ve son teknoloji ekipmanlarımızla sağlıklı gülüşler için yanınızdayız.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="randevu.html" class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-md font-medium transition">Randevu Al</a>
+                    <a href="iletisim.html" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-md font-medium transition">Bize Ulaşın</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Neden Bizi Tercih Etmelisiniz?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mb-4">
+                        <i class="fas fa-user-md text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Uzman Kadro</h3>
+                    <p class="text-gray-600">Alanında uzman ve deneyimli diş hekimlerimizle en kaliteli tedavi hizmetini sunuyoruz.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mb-4">
+                        <i class="fas fa-tooth text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Modern Teknoloji</h3>
+                    <p class="text-gray-600">En son teknoloji cihazlar ve malzemelerle ağrısız ve konforlu tedavi imkanı sağlıyoruz.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mb-4">
+                        <i class="fas fa-smile text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Hasta Memnuniyeti</h3>
+                    <p class="text-gray-600">Hastalarımızın konforunu ve memnuniyetini her zaman ön planda tutuyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Tedavi Hizmetlerimiz</h2>
+            <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">Ağız ve diş sağlığınız için sunduğumuz kapsamlı tedavi hizmetlerimiz ile sağlıklı gülüşlere kavuşmanızı sağlıyoruz.</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="tedaviler/estetik-dis-hekimligi.html" class="group">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm group-hover:shadow-md transition">
+                        <div class="h-48 bg-blue-100 flex items-center justify-center">
+                            <i class="fas fa-teeth text-5xl text-blue-500"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition">Estetik Diş Hekimliği</h3>
+                            <p class="text-gray-600">Gülüşünüzü güzelleştiren estetik uygulamalar</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="tedaviler/restoratif-endodonti.html" class="group">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm group-hover:shadow-md transition">
+                        <div class="h-48 bg-blue-100 flex items-center justify-center">
+                            <i class="fas fa-tooth text-5xl text-blue-500"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition">Restoratif ve Endodonti</h3>
+                            <p class="text-gray-600">Diş yapısını koruyan ve onaran tedaviler</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="tedaviler/protetik-tedaviler.html" class="group">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm group-hover:shadow-md transition">
+                        <div class="h-48 bg-blue-100 flex items-center justify-center">
+                            <i class="fas fa-teeth-open text-5xl text-blue-500"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition">Protetik Tedaviler</h3>
+                            <p class="text-gray-600">Eksik dişlerin yerine konulması ve onarımı</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="tedaviler/ortodontik-tedaviler.html" class="group">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm group-hover:shadow-md transition">
+                        <div class="h-48 bg-blue-100 flex items-center justify-center">
+                            <i class="fas fa-grip-lines text-5xl text-blue-500"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition">Ortodontik Tedaviler</h3>
+                            <p class="text-gray-600">Diş ve çene düzensizliklerinin tedavisi</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="tedaviler.html" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition">
+                    Tüm Tedavilerimizi Görüntüle
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Hasta Yorumları</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Diş fobim vardı ama Prizma Klinik'teki doktorlar sayesinde artık diş tedavilerinden korkmuyorum. Çok profesyonel ve anlayışlı bir ekip."</p>
+                    <div class="font-medium">Ayşe Y.</div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"İmplant tedavim için tercih ettiğim Prizma Klinik'ten çok memnun kaldım. Ağrısız ve konforlu bir tedavi süreci geçirdim."</p>
+                    <div class="font-medium">Mehmet K.</div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Ortodonti tedavim için gittiğim Prizma Klinik'te çok iyi karşılandım. Tedavi sürecim boyunca her aşamada bilgilendirildim ve sonuçtan çok memnunum."</p>
+                    <div class="font-medium">Zeynep A.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Sağlıklı Gülüşler İçin İlk Adımı Atın</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Uzman kadromuz ve modern teknolojimizle diş sağlığınız için en iyi hizmeti sunuyoruz. Hemen randevu alın, sağlıklı gülüşünüze kavuşun.</p>
+            <a href="randevu.html" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-md font-medium inline-block transition">Randevu Al</a>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html> 

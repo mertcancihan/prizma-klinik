@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randevu Al - Prizma Klinik</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Header Component -->
+    <div id="header-container"></div>
+
+    <!-- Page Header -->
+    <section class="relative bg-blue-600 text-white">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-90"></div>
+        <div class="container mx-auto px-4 py-16 relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center">Randevu Al</h1>
+            <p class="text-xl max-w-3xl mx-auto text-center">Sağlıklı gülüşler için hemen randevu alın, uzman kadromuzla tanışın.</p>
+        </div>
+    </section>
+
+    <!-- Appointment Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+                <!-- Appointment Form -->
+                <div class="w-full lg:w-2/3 px-4 mb-10 lg:mb-0">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold mb-6 text-blue-600">Randevu Formu</h2>
+                        <form id="appointment-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">Adınız Soyadınız *</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">E-posta Adresiniz *</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="phone" class="block text-gray-700 font-medium mb-2">Telefon Numaranız *</label>
+                                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                </div>
+                                <div>
+                                    <label for="service" class="block text-gray-700 font-medium mb-2">Hizmet Türü *</label>
+                                    <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                        <option value="">Seçiniz</option>
+                                        <option value="estetik">Estetik Diş Hekimliği</option>
+                                        <option value="restoratif">Restoratif ve Endodonti</option>
+                                        <option value="protetik">Protetik Tedaviler</option>
+                                        <option value="ortodontik">Ortodontik Tedaviler</option>
+                                        <option value="cerrahi">Cerrahi Tedaviler</option>
+                                        <option value="cene">Çene Eklemi Rahatsızlıkları</option>
+                                        <option value="cocuk">Çocuk Diş Hekimliği</option>
+                                        <option value="diseti">Diş Eti Hastalıkları</option>
+                                        <option value="kontrol">Genel Kontrol</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="date" class="block text-gray-700 font-medium mb-2">Randevu Tarihi *</label>
+                                    <input type="text" id="date" name="date" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 datepicker" placeholder="GG/AA/YYYY" required>
+                                </div>
+                                <div>
+                                    <label for="time" class="block text-gray-700 font-medium mb-2">Randevu Saati *</label>
+                                    <select id="time" name="time" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                        <option value="">Seçiniz</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="09:30">09:30</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="10:30">10:30</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="11:30">11:30</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="13:30">13:30</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="14:30">14:30</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="15:30">15:30</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="16:30">16:30</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="17:30">17:30</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Notlar</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Şikayetleriniz veya eklemek istediğiniz notlar..."></textarea>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="privacy" name="privacy" class="mr-2" required>
+                                <label for="privacy" class="text-gray-700">Kişisel verilerin korunması hakkındaki <a href="#" class="text-blue-600 hover:underline">aydınlatma metnini</a> okudum ve kabul ediyorum. *</label>
+                            </div>
+                            
+                            <div>
+                                <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition">Randevu Oluştur</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="w-full lg:w-1/3 px-4">
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                        <h3 class="text-xl font-bold mb-4 text-blue-600">Randevu Bilgileri</h3>
+                        <p class="text-gray-700 mb-6">Randevu oluşturmak için formu doldurabilir veya telefonla bize ulaşabilirsiniz. Randevunuz onaylandıktan sonra size e-posta veya telefon ile bilgilendirme yapılacaktır.</p>
+                        
+                        <h4 class="text-lg font-semibold mb-3 flex items-center">
+                            <i class="fas fa-info-circle text-blue-500 mr-2"></i>
+                            Önemli Bilgiler
+                        </h4>
+                        <ul class="text-gray-700 mb-6 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Randevunuza gelmeden önce diş fırçalamayı unutmayınız.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Randevu saatinden 10 dakika önce klinikte olmanız önerilir.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Randevunuzu iptal etmeniz gerekirse, en az 24 saat önceden bilgi vermenizi rica ederiz.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Kullandığınız ilaçlar varsa, lütfen diş hekiminizi bilgilendiriniz.</span>
+                            </li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-semibold mb-3 flex items-center">
+                            <i class="fas fa-phone-alt text-blue-500 mr-2"></i>
+                            Telefonla Randevu
+                        </h4>
+                        <p class="text-gray-700 mb-2">Telefonla randevu almak için:</p>
+                        <p class="text-xl font-semibold text-blue-600 mb-6">+90 506 991 93 17</p>
+                        
+                        <h4 class="text-lg font-semibold mb-3 flex items-center">
+                            <i class="fas fa-clock text-blue-500 mr-2"></i>
+                            Çalışma Saatleri
+                        </h4>
+                        <ul class="text-gray-700">
+                            <li class="mb-1">Pazartesi - Cuma: 09:00 - 19:00</li>
+                            <li class="mb-1">Cumartesi: 09:00 - 17:00</li>
+                            <li>Pazar: Kapalı</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/tr.js"></script>
+    <script>
+        // Tarih seçici
+        flatpickr(".datepicker", {
+            dateFormat: "d/m/Y",
+            minDate: "today",
+            locale: "tr",
+            disable: [
+                function(date) {
+                    // Pazar günlerini devre dışı bırak
+                    return (date.getDay() === 0);
+                }
+            ]
+        });
+        
+        // Randevu formu gönderimi
+        document.getElementById('appointment-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Form doğrulama
+            let isValid = true;
+            const requiredFields = this.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.classList.add('border-red-500');
+                } else {
+                    field.classList.remove('border-red-500');
+                }
+            });
+            
+            if (isValid) {
+                // Form gönderme işlemi burada yapılabilir
+                alert('Randevunuz başarıyla oluşturuldu. En kısa sürede sizinle iletişime geçeceğiz.');
+                this.reset();
+            } else {
+                alert('Lütfen tüm zorunlu alanları doldurun.');
+            }
+        });
+    </script>
+</body>
+</html> 

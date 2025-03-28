@@ -1,0 +1,191 @@
+/* Ana Stiller */
+:root {
+    --primary-color: #0B1A2F; /* Koyu mavi (logo arka plan) */
+    --primary-dark: #061425; /* Daha koyu mavi */
+    --secondary-color: #FF9F1C; /* Turuncu/Amber (logo üçgen) */
+    --secondary-dark: #E08A09; /* Daha koyu turuncu */
+    --text-color: #1f2937;
+    --text-light: #6b7280;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Sabitleme */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: var(--white);
+    z-index: 1000;
+}
+
+.bg-header {
+    background-color: var(--primary-color);
+}
+
+/* Animasyonlar */
+.transition {
+    transition: all 0.3s ease;
+}
+
+/* Özel Stiller */
+.hero-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Mobil Menü Animasyonları */
+.mobile-dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-dropdown-content.active {
+    max-height: 500px;
+}
+
+.mobile-dropdown-icon {
+    transition: transform 0.3s ease;
+}
+
+.mobile-dropdown-icon.active {
+    transform: rotate(180deg);
+}
+
+/* Tedavi Kartları Hover Efekti */
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Sayfa Geçişleri */
+.page-transition {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Ayarlar */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Özel Buton Stilleri */
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-dark);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+/* Özel Scroll Bar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-dark);
+}
+
+/* Dropdown menü stilleri */
+.group {
+    position: relative;
+}
+
+.group > div[class*="absolute"] {
+    display: none;
+    z-index: 50;
+}
+
+.group > div[class*="absolute"]:not(.hidden) {
+    display: block;
+}
+
+/* Mobil dropdown icon animasyonu */
+.mobile-dropdown-icon {
+    transition: transform 0.2s ease;
+}
+
+.mobile-dropdown-icon.active {
+    transform: rotate(180deg);
+}
+
+/* Mobil dropdown içerik animasyonu */
+.mobile-dropdown-content {
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.mobile-dropdown-content.active {
+    max-height: 500px;
+}
+
+/* Mobil Menü Stilleri */
+#mobile-menu {
+    background-color: var(--primary-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#mobile-menu a, 
+#mobile-menu button {
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+#mobile-menu a:hover, 
+#mobile-menu button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+#mobile-dropdown-content {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+} 

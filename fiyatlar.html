@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiyatlar - Prizma Klinik</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Header Component -->
+    <div id="header-container"></div>
+
+    <!-- Page Header -->
+    <section class="relative bg-blue-600 text-white">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-90"></div>
+        <div class="container mx-auto px-4 py-16 relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center">Tedavi Fiyatlarımız</h1>
+            <p class="text-xl max-w-3xl mx-auto text-center">Prizma Klinik'te sunduğumuz tedavi hizmetlerinin fiyat listesi. Detaylı bilgi için bizimle iletişime geçebilirsiniz.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+                <!-- Main Content -->
+                <div class="w-full lg:w-2/3 px-4 mb-10 lg:mb-0">
+                    <!-- Pricing Tabs -->
+                    <div class="mb-8">
+                        <div class="flex flex-wrap border-b border-gray-200">
+                            <button class="price-tab active-tab text-lg font-medium py-2 px-4 focus:outline-none" data-tab="all">Tüm Tedaviler</button>
+                            <button class="price-tab text-lg font-medium py-2 px-4 focus:outline-none" data-tab="estetik">Estetik Diş Hekimliği</button>
+                            <button class="price-tab text-lg font-medium py-2 px-4 focus:outline-none" data-tab="restoratif">Restoratif Tedaviler</button>
+                            <button class="price-tab text-lg font-medium py-2 px-4 focus:outline-none" data-tab="protetik">Protetik Tedaviler</button>
+                            <button class="price-tab text-lg font-medium py-2 px-4 focus:outline-none" data-tab="cerrahi">Cerrahi Tedaviler</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Pricing Tables -->
+                    <div class="price-content" id="all">
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
+                            <div class="bg-blue-600 text-white px-6 py-4">
+                                <h3 class="text-xl font-bold">Estetik Diş Hekimliği</h3>
+                            </div>
+                            <div class="divide-y divide-gray-200">
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Diş Beyazlatma (Bleaching)</span>
+                                    <span class="font-semibold">2.500 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Laminate Veneer (Diş başına)</span>
+                                    <span class="font-semibold">3.000 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Zirkonyum Kaplama (Diş başına)</span>
+                                    <span class="font-semibold">2.800 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Kompozit Bonding (Diş başına)</span>
+                                    <span class="font-semibold">1.200 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Gülüş Tasarımı (Dijital)</span>
+                                    <span class="font-semibold">1.500 ₺</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
+                            <div class="bg-blue-600 text-white px-6 py-4">
+                                <h3 class="text-xl font-bold">Restoratif Tedaviler</h3>
+                            </div>
+                            <div class="divide-y divide-gray-200">
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Kompozit Dolgu (Tek yüzey)</span>
+                                    <span class="font-semibold">800 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Kompozit Dolgu (İki yüzey)</span>
+                                    <span class="font-semibold">1.000 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Kompozit Dolgu (Üç yüzey)</span>
+                                    <span class="font-semibold">1.200 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Kanal Tedavisi (Tek kanal)</span>
+                                    <span class="font-semibold">1.500 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Kanal Tedavisi (Çok kanal)</span>
+                                    <span class="font-semibold">2.000 ₺</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
+                            <div class="bg-blue-600 text-white px-6 py-4">
+                                <h3 class="text-xl font-bold">Protetik Tedaviler</h3>
+                            </div>
+                            <div class="divide-y divide-gray-200">
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Metal Destekli Porselen Kron (Diş başına)</span>
+                                    <span class="font-semibold">2.000 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Tam Seramik Kron (Diş başına)</span>
+                                    <span class="font-semibold">2.500 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">İmplant Üstü Kron (Diş başına)</span>
+                                    <span class="font-semibold">3.500 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Hareketli Protez (Tam)</span>
+                                    <span class="font-semibold">5.000 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Hareketli Protez (Kısmi)</span>
+                                    <span class="font-semibold">4.000 ₺</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                            <div class="bg-blue-600 text-white px-6 py-4">
+                                <h3 class="text-xl font-bold">Cerrahi Tedaviler</h3>
+                            </div>
+                            <div class="divide-y divide-gray-200">
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Diş Çekimi (Basit)</span>
+                                    <span class="font-semibold">600 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Diş Çekimi (Cerrahi)</span>
+                                    <span class="font-semibold">1.000 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Gömülü Diş Operasyonu</span>
+                                    <span class="font-semibold">1.800 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">İmplant Uygulaması (Tek)</span>
+                                    <span class="font-semibold">7.500 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Sinüs Lifting</span>
+                                    <span class="font-semibold">5.000 ₺</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="price-content hidden" id="estetik">
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                            <div class="bg-blue-600 text-white px-6 py-4">
+                                <h3 class="text-xl font-bold">Estetik Diş Hekimliği</h3>
+                            </div>
+                            <div class="divide-y divide-gray-200">
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Diş Beyazlatma (Bleaching)</span>
+                                    <span class="font-semibold">2.500 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Laminate Veneer (Diş başına)</span>
+                                    <span class="font-semibold">3.000 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Zirkonyum Kaplama (Diş başına)</span>
+                                    <span class="font-semibold">2.800 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Kompozit Bonding (Diş başına)</span>
+                                    <span class="font-semibold">1.200 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Gülüş Tasarımı (Dijital)</span>
+                                    <span class="font-semibold">1.500 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">E-max Laminate</span>
+                                    <span class="font-semibold">3.200 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Diş Eti Estetiği</span>
+                                    <span class="font-semibold">2.000 ₺</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="price-content hidden" id="restoratif">
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                            <div class="bg-blue-600 text-white px-6 py-4">
+                                <h3 class="text-xl font-bold">Restoratif Tedaviler</h3>
+                            </div>
+                            <div class="divide-y divide-gray-200">
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Kompozit Dolgu (Tek yüzey)</span>
+                                    <span class="font-semibold">800 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Kompozit Dolgu (İki yüzey)</span>
+                                    <span class="font-semibold">1.000 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Kompozit Dolgu (Üç yüzey)</span>
+                                    <span class="font-semibold">1.200 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Kanal Tedavisi (Tek kanal)</span>
+                                    <span class="font-semibold">1.500 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Kanal Tedavisi (Çok kanal)</span>
+                                    <span class="font-semibold">2.000 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Fiber Post Uygulaması</span>
+                                    <span class="font-semibold">800 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Kanal Tedavisi Revizyonu</span>
+                                    <span class="font-semibold">2.200 ₺</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="price-content hidden" id="protetik">
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                            <div class="bg-blue-600 text-white px-6 py-4">
+                                <h3 class="text-xl font-bold">Protetik Tedaviler</h3>
+                            </div>
+                            <div class="divide-y divide-gray-200">
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Metal Destekli Porselen Kron (Diş başına)</span>
+                                    <span class="font-semibold">2.000 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Tam Seramik Kron (Diş başına)</span>
+                                    <span class="font-semibold">2.500 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">İmplant Üstü Kron (Diş başına)</span>
+                                    <span class="font-semibold">3.500 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Hareketli Protez (Tam)</span>
+                                    <span class="font-semibold">5.000 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Hareketli Protez (Kısmi)</span>
+                                    <span class="font-semibold">4.000 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">İmplant Destekli Protez</span>
+                                    <span class="font-semibold">15.000 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Geçici Kron (Diş başına)</span>
+                                    <span class="font-semibold">500 ₺</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="price-content hidden" id="cerrahi">
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                            <div class="bg-blue-600 text-white px-6 py-4">
+                                <h3 class="text-xl font-bold">Cerrahi Tedaviler</h3>
+                            </div>
+                            <div class="divide-y divide-gray-200">
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Diş Çekimi (Basit)</span>
+                                    <span class="font-semibold">600 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Diş Çekimi (Cerrahi)</span>
+                                    <span class="font-semibold">1.000 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Gömülü Diş Operasyonu</span>
+                                    <span class="font-semibold">1.800 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">İmplant Uygulaması (Tek)</span>
+                                    <span class="font-semibold">7.500 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Sinüs Lifting</span>
+                                    <span class="font-semibold">5.000 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Kemik Grefti Uygulaması</span>
+                                    <span class="font-semibold">3.500 ₺</span>
+                                </div>
+                                <div class="flex justify-between px-6 py-4">
+                                    <span class="text-gray-700">Diş Eti Operasyonu</span>
+                                    <span class="font-semibold">1.500 ₺</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pricing Note -->
+                    <div class="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
+                        <h4 class="text-lg font-semibold mb-3 text-blue-600">Fiyatlandırma Hakkında Bilgi</h4>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-info-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Fiyatlar, tedavi öncesi yapılacak muayene sonucunda değişiklik gösterebilir.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-info-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Fiyatlara KDV dahildir.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-info-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Fiyatlar, 31.12.2023 tarihine kadar geçerlidir.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-info-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Detaylı bilgi ve özel fiyat teklifleri için lütfen bizimle iletişime geçiniz.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="w-full lg:w-1/3 px-4">
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-sm mb-8">
+                        <h3 class="text-xl font-bold mb-4 text-blue-600">Ödeme Seçenekleri</h3>
+                        <p class="text-gray-700 mb-6">Prizma Klinik olarak, tedavi sürecinizi kolaylaştırmak için çeşitli ödeme seçenekleri sunuyoruz.</p>
+                        
+                        <h4 class="text-lg font-semibold mb-3 flex items-center">
+                            <i class="fas fa-credit-card text-blue-500 mr-2"></i>
+                            Taksit İmkanı
+                        </h4>
+                        <p class="text-gray-700 mb-6">Anlaşmalı kredi kartlarına 3, 6, 9 ve 12 taksit imkanı sunuyoruz. Detaylı bilgi için resepsiyonumuza danışabilirsiniz.</p>
+                        
+                        <h4 class="text-lg font-semibold mb-3 flex items-center">
+                            <i class="fas fa-percentage text-blue-500 mr-2"></i>
+                            Özel İndirimler
+                        </h4>
+                        <ul class="text-gray-700 mb-6 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Nakit ödemelerde %5 indirim</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Öğrencilere %10 indirim</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Aile üyelerine özel paket fiyatlar</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="bg-white rounded-lg p-5 border border-blue-100">
+                            <h4 class="text-lg font-semibold mb-3 text-blue-600">Ücretsiz Muayene</h4>
+                            <p class="text-gray-700 mb-4">İlk muayene ve konsültasyon ücretsizdir. Hemen randevu alarak, diş sağlığınız hakkında detaylı bilgi edinebilirsiniz.</p>
+                            <a href="randevu.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md font-medium hover:bg-blue-700 transition">Randevu Al</a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-600 text-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-xl font-bold mb-4">Sorularınız mı var?</h3>
+                        <p class="mb-6">Tedaviler ve fiyatlandırma hakkında daha fazla bilgi almak için bizimle iletişime geçebilirsiniz.</p>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span class="text-lg">+90 506 991 93 17</span>
+                        </div>
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>prizmaadsp@gmail.com</span>
+                        </div>
+                        <a href="iletisim.html" class="inline-block bg-white text-blue-600 px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition">İletişime Geç</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Fiyat tabları için JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.price-tab');
+            const contents = document.querySelectorAll('.price-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Aktif tab sınıfını kaldır
+                    tabs.forEach(t => t.classList.remove('active-tab'));
+                    
+                    // Tıklanan taba aktif sınıfını ekle
+                    tab.classList.add('active-tab');
+                    
+                    // İçerikleri gizle
+                    contents.forEach(content => content.classList.add('hidden'));
+                    
+                    // İlgili içeriği göster
+                    const tabId = tab.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.remove('hidden');
+                });
+            });
+        });
+    </script>
+    <style>
+        .active-tab {
+            color: #2563eb;
+            border-bottom: 2px solid #2563eb;
+        }
+    </style>
+</body>
+</html> 
