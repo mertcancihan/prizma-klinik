@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="site.title">Prizma Klinik - Diş Hekimliği Kliniği</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+        .language-dropdown .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            min-width: 140px;
+            z-index: 1000;
+            display: none;
+            overflow: hidden;
+        }
+        .language-dropdown.active .dropdown-menu {
+            display: block;
+        }
+        .language-dropdown .dropdown-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 14px;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+        }
+        .language-dropdown .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+        .language-dropdown .dropdown-item.active {
+            background-color: #007bff;
+            color: white;
+        }
+        .language-selector {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border: 2px solid rgba(255,255,255,0.3);
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 10px rgba(0,123,255,0.3);
+        }
+        .language-selector:hover {
+            background: linear-gradient(135deg, #0056b3, #004085);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,123,255,0.4);
+        }
+        .flag-icon {
+            font-size: 16px;
+            margin-right: 6px;
+        }
+        .language-text {
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 25px;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            background: #f8f9fa;
+        }
+        .test-section h2, .test-section h3 {
+            color: #495057;
+            margin-bottom: 15px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+        .form-control:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+        }
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+        }
+        .demo-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #007bff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .success-badge {
+            background: #28a745;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-center mb-4">
+            <h1 data-i18n="site.title">Prizma Klinik - Diş Hekimliği Kliniği</h1>
+            <span class="success-badge">✅ i18n Test Sayfası</span>
+        </div>
+        
+        <div class="text-center">
+            <div class="language-dropdown">
+                <button class="language-selector" id="language-selector">
+                    <span class="flag-icon">🇹🇷</span>
+                    <span class="language-text">TR</span>
+                </button>
+                <div class="dropdown-menu">
+                    <button class="dropdown-item" data-lang="tr">
+                        <span class="flag-icon">🇹🇷</span>
+                        <span class="language-text">Türkçe</span>
+                    </button>
+                    <button class="dropdown-item" data-lang="en">
+                        <span class="flag-icon">🇺🇸</span>
+                        <span class="language-text">English</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2 data-i18n="about.welcome">Prizma Klinik'e Hoş Geldiniz</h2>
+            <div class="demo-card">
+                <p data-i18n="about.description1">Duden adlı küçük bir nehir yerlerinden akar ve gerekli regelia ile besler. Bu, cümlelerin kavrulmuş parçalarının ağzınıza uçtuğu cennet benzeri bir ülkedir.</p>
+                <p><strong>🏥 Founder:</strong> <span data-i18n="about.founder">Dr. Ahmet Yılmaz</span> - <span data-i18n="about.founder_title">CEO, Kurucu</span></p>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3 data-i18n="sections.consultation.title">Ücretsiz Konsültasyon</h3>
+            <div class="demo-card">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" data-i18n="sections.consultation.first_name" placeholder="Ad">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" data-i18n="sections.consultation.last_name" placeholder="Soyad">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option data-i18n="sections.consultation.departments.default">Bölüm Seçin</option>
+                            <option data-i18n="sections.consultation.departments.dental">Diş Hekimliği</option>
+                            <option data-i18n="sections.consultation.departments.neurology">Nöroloji</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-i18n="sections.consultation.button">Randevu Al</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3 data-i18n="services.subtitle">Kliniğimizin Hizmetleri</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="demo-card">
+                        <h5>🦷 <span data-i18n="services.items.dental_implants.title">Diş İmplantları</span></h5>
+                        <p data-i18n="services.items.dental_implants.description">Güçlü İşaret bile kör metinler hakkında hiçbir kontrole sahip değildir.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="demo-card">
+                        <h5>✨ <span data-i18n="services.items.cosmetic_dentistry.title">Kozmetik Diş Hekimliği</span></h5>
+                        <p data-i18n="services.items.cosmetic_dentistry.description">Güçlü İşaret bile kör metinler hakkında hiçbir kontrole sahip değildir.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="demo-card">
+                        <h5>🪥 <span data-i18n="services.items.teeth_whitening.title">Diş Beyazlatma</span></h5>
+                        <p data-i18n="services.items.teeth_whitening.description">Güçlü İşaret bile kör metinler hakkında hiçbir kontrole sahip değildir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3 data-i18n="pricing.subtitle">Fiyatlarımız</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="demo-card" data-pricing-plan="basic">
+                        <h4>💰 <span data-i18n="pricing.plans.basic.title">Temel</span></h4>
+                        <p class="h3 text-primary"><span data-i18n="pricing.plans.basic.price">750₺</span> <small data-i18n="pricing.per_session">/ seans</small></p>
+                        <ul class="list-unstyled">
+                            <li>✅ Tanı Hizmetleri</li>
+                            <li>✅ Profesyonel Konsültasyon</li>
+                            <li>✅ Diş İmplantları</li>
+                        </ul>
+                        <button class="btn btn-primary" data-i18n="pricing.get_offer">Teklif Al</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3>📞 <span data-i18n="header.free_call">Ücretsiz Arama</span></h3>
+            <div class="demo-card">
+                <p><strong>📱 Tel:</strong> <span data-i18n="header.phone">+90 212 345 67 89</span></p>
+                <p><strong>📍 Adres:</strong> <span data-i18n="header.address">Örnek Mahallesi, Sağlık Sokak No:15 Beşiktaş/İstanbul</span></p>
+                <p><strong>🕐 <span data-i18n="header.open_hours">Açık Saatler</span>:</strong> <span data-i18n="header.schedule">Pzt - Cum: 09:00 - 18:00</span></p>
+                <p><strong><span data-i18n="header.schedule_sunday">Pzr: Kapalı</span></strong></p>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <p class="text-muted">
+                <strong>🎯 Test Talimatları:</strong><br>
+                Yukarıdaki bayraklı butona tıklayın ve dilleri değiştirin.<br>
+                Tüm metinlerin anında değiştiğini görmelisiniz!
+            </p>
+            <div class="alert alert-success mt-3" role="alert">
+                <strong>✅ Yapılacaklar:</strong><br>
+                🇹🇷 Türkiye bayrağı → Türkçe metinler görünmelidir<br>
+                🇺🇸 Amerika bayrağı → İngilizce metinler görünmelidir<br>
+                💾 Seçiminiz kaydedilir ve hatırlanır<br>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+</body>
+</html> 

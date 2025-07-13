@@ -25,51 +25,118 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+            #language-dropdown .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #495057;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        z-index: 10000;
+        margin-top: -30px;
+      }
+      #language-dropdown .dropdown-menu.show {
+        display: block;
+      }
+      #language-dropdown {
+        position: relative;
+      }
+      .navbar-nav {
+        overflow: visible;
+      }
+      .navbar {
+        z-index: 1000;
+        position: sticky;
+        top: 0;
+        background-color: #fff !important;
+        border-bottom: 1px solid #e9ecef;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .navbar .nav-link {
+        color: #333 !important;
+      }
+      .navbar .nav-link:hover {
+        color: #007bff !important;
+      }
+      .navbar-toggler {
+        border-color: #333 !important;
+      }
+      .navbar-toggler .oi {
+        color: #333 !important;
+      }
+      .dropdown-item:hover {
+        background-color: #495057;
+      }
+      .dropdown-item.active {
+        background-color: #007bff;
+        color: #fff;
+      }
+    </style>
   </head>
   <body>
     <div class="py-md-5 py-4 border-bottom">
     	<div class="container">
     		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
     			<div class="col-md-4 order-md-2 mb-2 mb-md-0 align-items-center text-center">
-		    		<a class="navbar-brand" href="index.html">Dentista<span>Dental Clinic</span></a>
+		    		<a class="navbar-brand" href="index.html"><span data-i18n="site.name">Prizma Klinik</span><span data-i18n="site.tagline">Diş Hekimliği Kliniği</span></a>
 	    		</div>
 	    		<div class="col-md-4 order-md-1 d-flex topper mb-md-0 mb-2 align-items-center text-md-right">
 	    			<div class="icon d-flex justify-content-center align-items-center order-md-last">
 	    				<span class="icon-map"></span>
 	    			</div>
 	    			<div class="pr-md-4 pl-md-0 pl-3 text">
-					    <p class="con"><span>Free Call</span> <span>+1 234 456 78910</span></p>
-					    <p class="con">198 West 21th Street, Suite 721 New York NY 10016</p>
+					    <p class="con"><span data-i18n="header.free_call">Ücretsiz Arama</span> <span data-i18n="header.phone">+90 212 345 67 89</span></p>
+					    <p class="con" data-i18n="header.address">Örnek Mahallesi, Sağlık Sokak No:15 Beşiktaş/İstanbul</p>
 				    </div>
 			    </div>
 			    <div class="col-md-4 order-md-3 d-flex topper mb-md-0 align-items-center">
 			    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
 			    	<div class="text pl-3 pl-md-3">
-					    <p class="hr"><span>Open Hours</span></p>
-					    <p class="time"><span>Mon - Sat:</span> <span>8:00am - 9:00pm</span> Sun: Closed</p>
+					    <p class="hr"><span data-i18n="header.open_hours">Açık Saatler</span></p>
+					    <p class="time"><span data-i18n="header.schedule">Pzt - Cum: 09:00 - 18:00</span> <span data-i18n="header.schedule_sunday">Pzr: Kapalı</span></p>
 				    </div>
 			    </div>
 		    </div>
 		  </div>
     </div>
-	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container d-flex align-items-center">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container d-flex align-items-center">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item active"><a href="index.html" class="nav-link pl-0">Home</a></li>
-	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	        	<li class="nav-item"><a href="doctor.html" class="nav-link">Doctor</a></li>
-	        	<li class="nav-item"><a href="department.html" class="nav-link">Treatments</a></li>
-	        	<li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-	        	<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+          <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item active"><a href="index.html" class="nav-link pl-0" data-i18n="navigation.home">Anasayfa</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link" data-i18n="navigation.about">Hakkımızda</a></li>
+            <li class="nav-item"><a href="doctor.html" class="nav-link" data-i18n="navigation.doctor">Doktorlar</a></li>
+            <li class="nav-item"><a href="department.html" class="nav-link" data-i18n="navigation.treatments">Tedaviler</a></li>
+            <li class="nav-item"><a href="pricing.html" class="nav-link" data-i18n="navigation.pricing">Fiyatlar</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link" data-i18n="navigation.blog">Blog</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link" data-i18n="navigation.contact">İletişim</a></li>
+    
+            <!-- Dil Seçici -->
+                         <li class="nav-item dropdown" id="language-dropdown">
+               <a href="#" class="nav-link" id="language-selector" role="button">
+                 🌐 Diller
+               </a>
+              <div class="dropdown-menu dropdown-menu-right bg-dark border-0" style="min-width: 120px;">
+                <a class="dropdown-item text-white px-3" href="#" data-lang="tr">
+                  Türkçe
+                </a>
+                <a class="dropdown-item text-white px-3" href="#" data-lang="en">
+                  English
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
     <!-- END nav -->
     
     <section class="home-slider owl-carousel">
@@ -78,9 +145,9 @@
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
           <div class="col-md-6 text ftco-animate">
-            <h1 class="mb-4">Helping Your <span>Stay Happy One</span></h1>
-            <h3 class="subheading">Everyday We Bring Hope and Smile to the Patient We Serve</h3>
-            <p><a href="#" class="btn btn-secondary px-4 py-3 mt-3">View our works</a></p>
+            <h1 class="mb-4" data-i18n="hero.slide1.title">Mutlu Kalmanıza <span>Yardımcı Oluyoruz</span></h1>
+            <h3 class="subheading" data-i18n="hero.slide1.subtitle">Her gün hizmet verdiğimiz hastalara umut ve gülümseme getiriyoruz</h3>
+            <p><a href="#" class="btn btn-secondary px-4 py-3 mt-3" data-i18n="hero.slide1.button">Çalışmalarımızı görüntüle</a></p>
           </div>
         </div>
         </div>
@@ -91,9 +158,9 @@
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
           <div class="col-md-6 text ftco-animate">
-            <h1 class="mb-4">Smile Makes <br>A Lasting Impression</h1>
-            <h3 class="subheading">Your Health is Our Top Priority with Comprehensive, Affordable medical.</h3>
-            <p><a href="#" class="btn btn-secondary px-4 py-3 mt-3">View our works</a></p>
+            <h1 class="mb-4" data-i18n="hero.slide2.title">Gülümseme <br>Kalıcı Bir İzlenim Bırakır</h1>
+            <h3 class="subheading" data-i18n="hero.slide2.subtitle">Sağlığınız kapsamlı, uygun fiyatlı tıbbi hizmetlerle bizim önceliğimizdir.</h3>
+            <p><a href="#" class="btn btn-secondary px-4 py-3 mt-3" data-i18n="hero.slide2.button">Çalışmalarımızı görüntüle</a></p>
           </div>
         </div>
         </div>
@@ -108,18 +175,18 @@
 					<div class="col-md-7 wrap-about py-4 py-md-5 ftco-animate">
 	          <div class="heading-section mb-5">
 	          	<div class="pl-md-5 ml-md-5 pt-md-5">
-		          	<span class="subheading mb-2">Welcome to Dentista</span>
-		            <h2 class="mb-2" style="font-size: 32px;">Medical specialty concerned with the care of acutely ill hospitalized patients</h2>
+		          	<span class="subheading mb-2" data-i18n="about.welcome">Prizma Klinik'e Hoş Geldiniz</span>
+		            <h2 class="mb-2" style="font-size: 32px;" data-i18n="about.title">Hastane ortamında akut hastalığı olan hastaların bakımı ile ilgili tıbbi uzmanlık</h2>
 	            </div>
 	          </div>
 	          <div class="pl-md-5 ml-md-5 mb-5">
-							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+							<p data-i18n="about.description1">Duden adlı küçük bir nehir yerlerinden akar ve gerekli regelia ile besler. Bu, cümlelerin kavrulmuş parçalarının ağzınıza uçtuğu cennet benzeri bir ülkedir. Güçlü İşaret bile kör metinler hakkında hiçbir kontrole sahip değildir, neredeyse yazımsız bir yaşamdır.</p>
+							<p data-i18n="about.description2">Duden adlı küçük bir nehir yerlerinden akar ve gerekli regelia ile besler. Bu, cümlelerin kavrulmuş parçalarının ağzınıza uçtuğu cennet benzeri bir ülkedir.</p>
 							<div class="founder d-flex align-items-center mt-5">
 								<div class="img" style="background-image: url(images/doc-1.jpg);"></div>
 								<div class="text pl-3">
-									<h3 class="mb-0">Dr. Paul Foster</h3>
-									<span class="position">CEO, Founder</span>
+									<h3 class="mb-0" data-i18n="about.founder">Dr. Ahmet Yılmaz</h3>
+									<span class="position" data-i18n="about.founder_title">CEO, Kurucu</span>
 								</div>
 							</div>
 						</div>
@@ -133,26 +200,26 @@
 				<div class="row no-gutters">
 					<div class="col-md-3 d-flex align-items-stretch">
 						<div class="consultation w-100 text-center px-4 px-md-5">
-							<h3 class="mb-4">Dental Services</h3>
-							<p>A small river named Duden flows by their place and supplies</p>
-							<a href="#" class="btn-custom">See Services</a>
+							<h3 class="mb-4" data-i18n="sections.dental_services.title">Diş Hekimliği Hizmetleri</h3>
+							<p data-i18n="sections.dental_services.description">Duden adlı küçük bir nehir yerlerinden akar ve besler</p>
+							<a href="#" class="btn-custom" data-i18n="sections.dental_services.button">Hizmetleri Gör</a>
 						</div>
 					</div>
 					<div class="col-md-6 d-flex align-items-stretch">
 						<div class="consultation consul w-100 px-4 px-md-5">
 							<div class="text-center">
-								<h3 class="mb-4">Free Consultation</h3>
+								<h3 class="mb-4" data-i18n="sections.consultation.title">Ücretsiz Konsültasyon</h3>
 							</div>
 							<form action="#" class="appointment-form">
 								<div class="row">
 									<div class="col-md-12 col-lg-6 col-xl-4">
 										<div class="form-group">
-				    					<input type="text" class="form-control" placeholder="First Name">
+				    					<input type="text" class="form-control" data-i18n="sections.consultation.first_name" placeholder="Ad">
 				    				</div>
 									</div>
 									<div class="col-md-12 col-lg-6 col-xl-4">
 										<div class="form-group">
-				    					<input type="text" class="form-control" placeholder="Last Name">
+				    					<input type="text" class="form-control" data-i18n="sections.consultation.last_name" placeholder="Soyad">
 				    				</div>
 									</div>
 									<div class="col-md-12 col-lg-6 col-xl-4">
@@ -161,12 +228,12 @@
 		          					<div class="select-wrap">
 		                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
 		                      <select name="" id="" class="form-control">
-		                      	<option value="">Department</option>
-		                        <option value="">Neurology</option>
-		                        <option value="">Cardiology</option>
-		                        <option value="">Dental</option>
-		                        <option value="">Ophthalmology</option>
-		                        <option value="">Other Services</option>
+		                      	<option value="" data-i18n="sections.consultation.departments.default">Bölüm Seçin</option>
+		                        <option value="" data-i18n="sections.consultation.departments.neurology">Nöroloji</option>
+		                        <option value="" data-i18n="sections.consultation.departments.cardiology">Kardiyoloji</option>
+		                        <option value="" data-i18n="sections.consultation.departments.dental">Diş Hekimliği</option>
+		                        <option value="" data-i18n="sections.consultation.departments.ophthalmology">Göz Hastalıkları</option>
+		                        <option value="" data-i18n="sections.consultation.departments.other">Diğer Hizmetler</option>
 		                      </select>
 		                    </div>
 				              </div>
@@ -176,7 +243,7 @@
 										<div class="form-group">
 				    					<div class="input-wrap">
 				            		<div class="icon"><span class="ion-md-calendar"></span></div>
-				            		<input type="text" class="form-control appointment_date" placeholder="Date">
+				            		<input type="text" class="form-control appointment_date" data-i18n="sections.consultation.date" placeholder="Tarih">
 			            		</div>
 				    				</div>
 									</div>
@@ -184,13 +251,13 @@
 										<div class="form-group">
 				    					<div class="input-wrap">
 				            		<div class="icon"><span class="ion-ios-clock"></span></div>
-				            		<input type="text" class="form-control appointment_time" placeholder="Time">
+				            		<input type="text" class="form-control appointment_time" data-i18n="sections.consultation.time" placeholder="Saat">
 			            		</div>
 				    				</div>
 									</div>
 									<div class="col-md-12 col-lg-6 col-xl-4">
 										<div class="form-group">
-				              <input type="submit" value="Appointment" class="btn btn-secondary py-2 px-4">
+				              <input type="submit" data-i18n="sections.consultation.button" value="Randevu Al" class="btn btn-secondary py-2 px-4">
 				            </div>
 									</div>
 								</div>
@@ -199,9 +266,9 @@
 					</div>
 					<div class="col-md-3 d-flex align-items-stretch">
 						<div class="consultation w-100 text-center px-4 px-md-5">
-							<h3 class="mb-4">Find A Doctor</h3>
-							<p>A small river named Duden flows by their place and supplies</p>
-							<a href="#" class="btn-custom">Mee our doctor</a>
+							<h3 class="mb-4" data-i18n="sections.find_doctor.title">Doktor Bul</h3>
+							<p data-i18n="sections.find_doctor.description">Duden adlı küçük bir nehir yerlerinden akar ve besler</p>
+							<a href="#" class="btn-custom" data-i18n="sections.find_doctor.button">Doktorlarımızla tanışın</a>
 						</div>
 					</div>
 				</div>
@@ -211,11 +278,11 @@
 
     <section class="ftco-section ftco-services">
     	<div class="container">
-    		<div class="row justify-content-center mb-5 pb-2">
+    		        <div class="row justify-content-center mb-5 pb-2">
           <div class="col-md-8 text-center heading-section ftco-animate">
-          	<span class="subheading">Services</span>
-            <h2 class="mb-4">Our Clinic Services</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+          	<span class="subheading" data-i18n="services.title">Hizmetler</span>
+            <h2 class="mb-4" data-i18n="services.subtitle">Kliniğimizin Hizmetleri</h2>
+            <p data-i18n="services.description">Ayrı yaşıyorlar. Duden adlı küçük bir nehir yerlerinden akar ve gerekli regelia ile besler. Bu cennet benzeri bir ülkedir</p>
           </div>
         </div>
         <div class="row">
@@ -225,8 +292,8 @@
             		<span class="flaticon-drilling"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Dental Implants</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading" data-i18n="services.items.dental_implants.title">Diş İmplantları</h3>
+                <p data-i18n="services.items.dental_implants.description">Güçlü İşaret bile kör metinler hakkında hiçbir kontrole sahip değildir, neredeyse yazımsız bir yaşamdır.</p>
               </div>
             </div>
           </div>
@@ -236,8 +303,8 @@
             		<span class="flaticon-tooth"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Cosmetic Dentistry</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading" data-i18n="services.items.cosmetic_dentistry.title">Kozmetik Diş Hekimliği</h3>
+                <p data-i18n="services.items.cosmetic_dentistry.description">Güçlü İşaret bile kör metinler hakkında hiçbir kontrole sahip değildir, neredeyse yazımsız bir yaşamdır.</p>
               </div>
             </div>      
           </div>
@@ -247,8 +314,8 @@
             		<span class="flaticon-dental-floss"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Dental Care</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading" data-i18n="services.items.dental_care.title">Diş Bakımı</h3>
+                <p data-i18n="services.items.dental_care.description">Güçlü İşaret bile kör metinler hakkında hiçbir kontrole sahip değildir, neredeyse yazımsız bir yaşamdır.</p>
               </div>
             </div>      
           </div>
@@ -259,8 +326,8 @@
             		<span class="flaticon-shiny-tooth"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Teeth Whitening</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading" data-i18n="services.items.teeth_whitening.title">Diş Beyazlatma</h3>
+                <p data-i18n="services.items.teeth_whitening.description">Güçlü İşaret bile kör metinler hakkında hiçbir kontrole sahip değildir, neredeyse yazımsız bir yaşamdır.</p>
               </div>
             </div>
           </div>
@@ -524,26 +591,26 @@
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-2">
           <div class="col-md-8 text-center heading-section ftco-animate">
-          	<span class="subheading">Pricing</span>
-            <h2 class="mb-4">Our Pricing</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+          	<span class="subheading" data-i18n="pricing.title">Fiyatlandırma</span>
+            <h2 class="mb-4" data-i18n="pricing.subtitle">Fiyatlarımız</h2>
+            <p data-i18n="pricing.description">Ayrı yaşıyorlar. Duden adlı küçük bir nehir yerlerinden akar ve gerekli regelia ile besler. Bu cennet benzeri bir ülkedir</p>
           </div>
         </div>
     		<div class="row">
         	<div class="col-md-3 ftco-animate">
-        		<div class="pricing-entry pb-5 text-center">
+        		<div class="pricing-entry pb-5 text-center" data-pricing-plan="basic">
         			<div>
-	        			<h3 class="mb-4">Basic</h3>
-	        			<p><span class="price">$24.50</span> <span class="per">/ session</span></p>
+	        			<h3 class="mb-4" data-i18n="pricing.plans.basic.title">Temel</h3>
+	        			<p><span class="price" data-i18n="pricing.plans.basic.price">750₺</span> <span class="per" data-i18n="pricing.per_session">/ seans</span></p>
 	        		</div>
         			<ul>
-        				<li>Diagnostic Services</li>
-								<li>Professional Consultation</li>
-								<li>Tooth Implants</li>
-								<li>Surgical Extractions</li>
-								<li>Teeth Whitening</li>
+        				<li>Tanı Hizmetleri</li>
+								<li>Profesyonel Konsültasyon</li>
+								<li>Diş İmplantları</li>
+								<li>Cerrahi Çekimler</li>
+								<li>Diş Beyazlatma</li>
         			</ul>
-        			<p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+        			<p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3" data-i18n="pricing.get_offer">Teklif Al</a></p>
         		</div>
         	</div>
         	<div class="col-md-3 ftco-animate">
@@ -803,6 +870,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/i18n.js"></script>
     
   </body>
 </html>
